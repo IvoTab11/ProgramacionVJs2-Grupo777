@@ -68,25 +68,21 @@ public class StatePatron : MonoBehaviour
 
     private void Walk()
     {
-        // Lógica para caminar
         Debug.Log("Caminando");
     }
 
     private void Idle()
     {
-        // Lógica para estar inactivo
         Debug.Log("Inactivo");
     }
 
     private void Jump()
     {
-        // Lógica para saltar
         Debug.Log("Saltando");
     }
 
     private void Climb()
-    {
-        // Lógica para escalar
+    { 
         Debug.Log("Escalando");
     }
 }
