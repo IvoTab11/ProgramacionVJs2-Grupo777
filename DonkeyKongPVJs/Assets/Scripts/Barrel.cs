@@ -40,7 +40,8 @@ public class Barrel : MonoBehaviour
         //Comprueba si la posición en el eje Y del barril es menor a -5.5.
         if(this.transform.position.y<=posicionY){
             //Destruye el gameObject.
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }
