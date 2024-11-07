@@ -1250,10 +1250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319c58e84eeab46478ad58ba56e4ce81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 45bfeb92d9ffbb74e85410baa53833d2, type: 2}
   secondPrefab: {fileID: 2562726260786961737, guid: 98942f30df60ea949af7d59d33161740, type: 3}
-  poolSize: 5
   secondList: []
-  spawnInterval: 2
 --- !u!4 &739900709
 Transform:
   m_ObjectHideFlags: 0
@@ -2062,6 +2061,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3975084277334067773, guid: d2cc909d951901245a94e3003ef7a293, type: 3}
+      propertyPath: config
+      value: 
+      objectReference: {fileID: 11400000, guid: 45bfeb92d9ffbb74e85410baa53833d2, type: 2}
     - target: {fileID: 6205695563732400895, guid: d2cc909d951901245a94e3003ef7a293, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2356,10 +2359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f71e0ea05abaa4694b3b370b21785b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 45bfeb92d9ffbb74e85410baa53833d2, type: 2}
   barrelPrefab: {fileID: 1524940053666140568, guid: d26cee01585c75840b00b98e23815dcb, type: 3}
-  poolSize: 10
   barrelList: []
-  spawnInterval: 2
 --- !u!1001 &1716947419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2536,7 +2538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2661504871569255358, guid: 1963e05b1c4bf26429eb60912f8d7200, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1.25
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7777627781639291549, guid: 1963e05b1c4bf26429eb60912f8d7200, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3151,6 +3153,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3975084277334067773, guid: d2cc909d951901245a94e3003ef7a293, type: 3}
+      propertyPath: config
+      value: 
+      objectReference: {fileID: 11400000, guid: 45bfeb92d9ffbb74e85410baa53833d2, type: 2}
     - target: {fileID: 3975084277334067773, guid: d2cc909d951901245a94e3003ef7a293, type: 3}
       propertyPath: distanciaMaxima
       value: 11
