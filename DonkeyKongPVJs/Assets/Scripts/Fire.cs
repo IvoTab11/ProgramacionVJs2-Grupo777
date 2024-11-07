@@ -5,8 +5,8 @@ using UnityEngine;
 //Gestiona el comportamiento del objeto Fire;
 public class Fire : MonoBehaviour
 {
-    [SerializeField] private float velocidad = 2.0f;
-    [SerializeField] private float distanciaMaxima = 10.0f;
+    [SerializeField] private EnemyConfig config;
+    
 
     private Vector3 inicioPosicion;
     private Vector3 destinoPosicion;
@@ -16,13 +16,13 @@ public class Fire : MonoBehaviour
     void Start()
     {
         inicioPosicion = transform.position;
-        destinoPosicion = inicioPosicion + Vector3.right * distanciaMaxima;
+        destinoPosicion = inicioPosicion + Vector3.right * config.distanciaMaxima;
     }
 
     void Update()
     {
         // Mueve el personaje en la dirección actual(derecha).
-        transform.Translate(Vector3.right * direccion * velocidad * Time.deltaTime);
+        transform.Translate(Vector3.right * direccion * config.velocidad * Time.deltaTime);
 
         // Comprueba si se ha alcanzado la posición de destino.
         if (direccion == 1 && transform.position.x >= destinoPosicion.x)
@@ -37,7 +37,7 @@ public class Fire : MonoBehaviour
         {
             // Cambia la dirección y la posición de destino.
             direccion = 1;
-            destinoPosicion = inicioPosicion + Vector3.right * distanciaMaxima;
+            destinoPosicion = inicioPosicion + Vector3.right * config.distanciaMaxima;
             // Restaura la rotación para que mire en la dirección original.
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }

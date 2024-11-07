@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class SecondBarrelPool : MonoBehaviour
 {
+    [SerializeField] private EnemyConfig config;
     [SerializeField] private GameObject secondPrefab;
-    [SerializeField] private int poolSize = 5;
     [SerializeField] private List<GameObject> secondList;
-    [SerializeField] private float spawnInterval = 2f;
 
     private static SecondBarrelPool instance;
     public static SecondBarrelPool Instance {get {return instance;}}
@@ -24,7 +23,7 @@ public class SecondBarrelPool : MonoBehaviour
     }
     void Start()
     {
-      AddBarrelsToPool(poolSize);
+      AddBarrelsToPool(config.poolSize);
       StartCoroutine(SpawnBarrels());
     }
     private void AddBarrelsToPool(int amount)
@@ -70,7 +69,7 @@ public class SecondBarrelPool : MonoBehaviour
             }
 
             // Espera el tiempo definido antes de generar el siguiente barril
-            yield return new WaitForSeconds(spawnInterval);
+            yield return new WaitForSeconds(config.spawnInterval);
         }
     }
 }
