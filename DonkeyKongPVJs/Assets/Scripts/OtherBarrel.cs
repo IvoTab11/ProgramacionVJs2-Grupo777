@@ -29,7 +29,8 @@ public class OtherBarrel : MonoBehaviour
     }
     private void EliminarBarril(){
         if(this.transform.position.y<=posicionY){
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }
