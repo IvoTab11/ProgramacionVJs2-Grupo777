@@ -8,6 +8,7 @@ TagManager:
   - Objetivo
   - Ground
   - Escalera
+  - Moneda
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Plataformas
   - Personaje
   - Fuegos
-  - 
+  - Monedas
   - 
   - 
   - 

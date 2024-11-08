@@ -30,6 +30,10 @@ public class Barrel : MonoBehaviour
         // Ignora la colisión entre la capa "Barriles" y la capa "Barriles2".
          Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles"), LayerMask.NameToLayer("Barriles2"), true);
         }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Monedas")){
+        // Ignora la colisión entre la capa "Barriles" y la capa "Barriles2".
+         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles"), LayerMask.NameToLayer("Monedas"), true);
+        }
     }
 
     void Update(){
