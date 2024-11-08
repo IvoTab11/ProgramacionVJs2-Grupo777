@@ -20,6 +20,9 @@ public class OtherBarrel : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Fuegos")){
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles2"), LayerMask.NameToLayer("Fuegos"), true);
         }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Monedas")){
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles2"), LayerMask.NameToLayer("Monedas"), true);
+        }
 
     }
 
