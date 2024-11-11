@@ -20,17 +20,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Se obtiene la entrada de movimiento horizontal.
+        /*Se obtiene la entrada de movimiento horizontal*/
         float movementX = Input.GetAxis("Horizontal");
-        // Multiplica la entrada por la velocidad de movimiento y deltaTime.
+        /* Multiplica la entrada por la velocidad de movimiento y deltaTime*/
         Move(movementX * movementSpeed * Time.deltaTime);
 
-        // El personaje gira si se mueve a la izquierda.
+        /*El personaje gira si se mueve a la izquierda*/
         if (movementX < 0 && isFacingRight)
         {
             Flip();
         }
-        // El personaje gira si se mueve a la derecha.
+        /* El personaje gira si se mueve a la derecha*/
         else if (movementX > 0 && !isFacingRight)
         {
             Flip();
