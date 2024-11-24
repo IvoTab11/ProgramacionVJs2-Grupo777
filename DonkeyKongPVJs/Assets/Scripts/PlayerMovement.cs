@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Gestiona los movimientos horizontales del personaje.
-public class Player : MonoBehaviour
+public class PlayerMovement : Player
 {
     /* Representa la velocidad de movimiento.*/
     [SerializeField] private float movementSpeed ;
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         isFacingRight = !isFacingRight;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Objetivo"))
         {

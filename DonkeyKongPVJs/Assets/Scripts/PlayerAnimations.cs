@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Controla las animaciones del personaje principal.
-public class PlayerAnimations : MonoBehaviour
+public class PlayerAnimations : Player
 {
     //Referencia al componente Animator del personaje.
     private Animator animator;
@@ -46,7 +46,7 @@ public class PlayerAnimations : MonoBehaviour
     }
 
     //Desactiva la animación de salto si colisiona con un objeto.
-    private void OnCollisionEnter2D(Collision2D collision) {
+    public override void OnCollisionEnter2D(Collision2D collision) {
         animator.SetBool("isJumping", false);
     }
 

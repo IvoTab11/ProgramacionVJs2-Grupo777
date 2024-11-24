@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8105dd1e663ede4438f8f66d3d531881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 3500
+  jumpForce: 5
 --- !u!114 &206360583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8250d4645779e4b9cb7dcf9d86a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!4 &247291231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5883425892352298889, guid: d3a4da9b6a3754a41ae4514878074a2c, type: 3}
