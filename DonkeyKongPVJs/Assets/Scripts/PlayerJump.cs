@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*Gestiona el salto del personaje*/
-public class PlayerJump : MonoBehaviour
+public class PlayerJump : Player
 {
     [SerializeField] private float jumpForce ;
     /*Indica si el personaje está en la plataforma*/
@@ -28,7 +28,7 @@ public class PlayerJump : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public override void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
     }

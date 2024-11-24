@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Gestiona el movimiento del personaje principal al escalar.
-public class PlayerClimb : MonoBehaviour
+public class PlayerClimb : Player
 {
     [SerializeField] private float velocidadEscalada = 2f;
     private bool escalando;
@@ -48,7 +48,7 @@ public class PlayerClimb : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
+    public override void OnCollisionEnter2D(Collision2D collision){
       //Comprueba si el personaje colisiona con el objetivo
       if(collision.gameObject.CompareTag("Objetivo")){
         enabled=false;
