@@ -48,19 +48,21 @@ public class PlayerClimb : Player
         }
     }
 
-    public override void OnCollisionEnter2D(Collision2D collision){
-      //Comprueba si el personaje colisiona con el objetivo
-      if(collision.gameObject.CompareTag("Objetivo")){
-        enabled=false;
-        //Llama a la función LevelComplete() de GameManager.
-        FindObjectOfType<GameManager>().LevelComplete();
-      //Comprueba si el personaje colisiona con un obstaculo.
-      }else if(collision.gameObject.CompareTag("Obstaculo")){
-        enabled=false;
-        //Llama a la función LevelFailed() de GameManager.
-        FindObjectOfType<GameManager>().LevelFailed();
+public override void OnCollisionEnter2D(Collision2D collision)
+{
+        // Intentar obtener el componente ICollectible del objeto colisionado
+        ICollectible collectible = collision.gameObject.GetComponent<ICollectible>();
+        if (collectible != null)
+        {
+            collectible.Collect(this); // Manejar la lógica de colección
+        }
 
-      }
+        // También manejar otros objetos interactuables (usando ICollisionHandler)
+        ICollisionHandler handler = collision.gameObject.GetComponent<ICollisionHandler>();
+        if (handler != null)
+        {
+            handler.HandleCollision(this);
+        }
     }
-    
+
 }
