@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*Gestiona el salto del personaje*/
-public class PlayerJump : Player
+public class PlayerJump : Player, ICollisionExit
 {
     [SerializeField] private float jumpForce ;
     /*Indica si el personaje está en la plataforma*/
@@ -33,7 +33,7 @@ public class PlayerJump : Player
         isGrounded = true;
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
     }

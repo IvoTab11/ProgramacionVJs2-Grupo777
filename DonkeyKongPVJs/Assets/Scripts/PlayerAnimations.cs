@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Controla las animaciones del personaje principal.
-public class PlayerAnimations : Player
+public class PlayerAnimations : Player, ICollisionExit
 {
     //Referencia al componente Animator del personaje.
     private Animator animator;
@@ -51,7 +51,7 @@ public class PlayerAnimations : Player
     }
 
     //Activa la animación de salto si no colisiona con ningún objeto.
-    private void OnCollisionExit2D(Collision2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
         animator.SetBool("isJumping", true);
     }
