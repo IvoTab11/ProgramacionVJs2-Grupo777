@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OtherBarrel : MonoBehaviour
+public class SecondBarrel : Barrel
 {
-    private float posicionY = -5.0f;
 
     void Start()
     {
@@ -24,19 +23,6 @@ public class OtherBarrel : MonoBehaviour
             {
                 Physics2D.IgnoreLayerCollision(barrelLayer, i, true);
             }
-        }
-    }
-
-    void Update()
-    {
-        EliminarBarril();
-    }
-
-    private void EliminarBarril()
-    {
-        if (transform.position.y <= posicionY)
-        {
-            gameObject.SetActive(false); // Desactiva el barril si cae demasiado
         }
     }
 }

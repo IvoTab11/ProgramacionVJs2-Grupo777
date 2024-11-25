@@ -2,39 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Gestiona el comportamiento de los barriles que se desplazan por las plataformas.
-public class Barrel : MonoBehaviour
+public abstract class Barrel : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    [SerializeField] private float speed = 1f;
-    private float posicionY = -5.5f;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Buscar manejadores de colisiones en el objeto colisionado
-        IBarrelCollisionHandler handler = collision.gameObject.GetComponent<IBarrelCollisionHandler>();
-        if (handler != null)
-        {
-            handler.HandleCollision(this, collision);
-        }
-    }
+    protected float posicionY = -5.0f; // Altura mínima para eliminar el barril
 
     void Update()
     {
-        EliminarBarril();
+        EliminarBarril(); // Método común para verificar si el barril debe desactivarse
     }
 
-    private void EliminarBarril()
+    protected void EliminarBarril()
     {
-        if (this.transform.position.y <= posicionY)
+        if (transform.position.y <= posicionY)
         {
-            this.gameObject.SetActive(false);
+            gameObject.SetActive(false); // Desactiva el objeto
         }
     }
-}
 
+}

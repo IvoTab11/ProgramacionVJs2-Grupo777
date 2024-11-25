@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IBarrelCollisionHandler
 {
-    void HandleCollision(Barrel barrel, Collision2D collision);
+    void HandleCollision(FirtsBarrel firtsBarrel, Collision2D collision);
 }

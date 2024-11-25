@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireCollisionHandler : MonoBehaviour, IBarrelCollisionHandler
 {
-    public void HandleCollision(Barrel barrel, Collision2D collision)
+    public void HandleCollision(FirtsBarrel firtsBarrel, Collision2D collision)
     {
         Physics2D.IgnoreLayerCollision(
             LayerMask.NameToLayer("Barriles"),
