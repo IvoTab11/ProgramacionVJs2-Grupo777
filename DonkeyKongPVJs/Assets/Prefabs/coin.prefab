@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6194720373749819849}
   - component: {fileID: -1040950277293779196}
   - component: {fileID: 1887272148200179748}
-  - component: {fileID: -7158094113172879345}
+  - component: {fileID: 8152241672077707749}
   m_Layer: 12
   m_Name: coin
   m_TagString: Moneda
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
---- !u!114 &-7158094113172879345
+--- !u!114 &8152241672077707749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
