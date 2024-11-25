@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5772200590812603287}
   - component: {fileID: 4213265843974004825}
   - component: {fileID: 5414901161563624239}
+  - component: {fileID: -2783539948231815227}
   m_Layer: 8
   m_Name: otherBarrel
   m_TagString: Obstaculo
@@ -169,5 +170,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bf5be012f7bcd843b08a43874bdd028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2783539948231815227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2562726260786961737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b609e44f97d3be64da263382a2f7b3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

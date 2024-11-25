@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6194720373749819849}
   - component: {fileID: -1040950277293779196}
   - component: {fileID: 1887272148200179748}
+  - component: {fileID: -7158094113172879345}
   m_Layer: 12
   m_Name: coin
   m_TagString: Moneda
@@ -144,3 +145,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+--- !u!114 &-7158094113172879345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883132575363468521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2526d1fa48f3a7418e5bfb88dd35ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
