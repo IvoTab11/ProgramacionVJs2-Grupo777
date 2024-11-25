@@ -2,38 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Gestiona el comportamiento de los barriles que caen verticalmente.
 public class OtherBarrel : MonoBehaviour
 {
-    private float posicionY=-5.0f;
-    
-    // OnCollisionEnter2D() maneja las colisiones con otros objetos.
-    private void OnCollisionEnter2D(Collision2D collision){
-        // Comprueba si la colisión es con objetos de diferentes capas.
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Plataformas")){
-            // Ignora la colisión entre la capa "Barriles2" y la capa "Plataformas".
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles2"), LayerMask.NameToLayer("Plataformas"), true);
-        }
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Barriles")){
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles2"), LayerMask.NameToLayer("Barriles"), true);
-        }
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Fuegos")){
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles2"), LayerMask.NameToLayer("Fuegos"), true);
-        }
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Monedas")){
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Barriles2"), LayerMask.NameToLayer("Monedas"), true);
-        }
+    private float posicionY = -5.0f;
 
+    void Start()
+    {
+        // Configura las colisiones al iniciar el barril
+        ConfigurarColisiones();
+    }
+
+    private void ConfigurarColisiones()
+    {
+        int barrelLayer = LayerMask.NameToLayer("Barriles2");
+        int playerLayer = LayerMask.NameToLayer("Personaje");
+
+        // Ignorar colisiones con todas las capas excepto la del Player
+        for (int i = 0; i < 32; i++) // Unity soporta hasta 32 capas
+        {
+            if (i != playerLayer) // Mantener colisiones solo con el Player
+            {
+                Physics2D.IgnoreLayerCollision(barrelLayer, i, true);
+            }
+        }
     }
 
     void Update()
     {
         EliminarBarril();
     }
-    private void EliminarBarril(){
-        if(this.transform.position.y<=posicionY){
-            //Destroy(this.gameObject);
-            this.gameObject.SetActive(false);
+
+    private void EliminarBarril()
+    {
+        if (transform.position.y <= posicionY)
+        {
+            gameObject.SetActive(false); // Desactiva el barril si cae demasiado
         }
     }
 }

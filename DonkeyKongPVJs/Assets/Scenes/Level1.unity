@@ -2113,6 +2113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 853546387}
     m_Modifications:
+    - target: {fileID: -1083198749939009369, guid: d3a4da9b6a3754a41ae4514878074a2c, type: 3}
+      propertyPath: forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1386092193873098372, guid: d3a4da9b6a3754a41ae4514878074a2c, type: 3}
       propertyPath: m_Size.x
       value: 12
