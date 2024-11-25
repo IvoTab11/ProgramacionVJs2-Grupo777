@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6723618672427452527}
   - component: {fileID: 1265976676130059213}
   - component: {fileID: 9187312971438432328}
-  - component: {fileID: 6048111484437009093}
+  - component: {fileID: 1713117193593036759}
+  - component: {fileID: 7473972510188034903}
   m_Layer: 7
   m_Name: Barrel
   m_TagString: Obstaculo
@@ -149,7 +150,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.004673004}
   serializedVersion: 2
   m_Radius: 0.35
---- !u!114 &6048111484437009093
+--- !u!114 &1713117193593036759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524940053666140568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b609e44f97d3be64da263382a2f7b3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7473972510188034903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
