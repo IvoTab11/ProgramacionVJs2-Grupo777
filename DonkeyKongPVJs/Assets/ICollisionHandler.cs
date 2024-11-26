@@ -7,6 +7,6 @@ public interface ICollisionHandler
 {
 
     /*Este metodo que debe implementarse en las clases que utilicen esta interfaz.
-       Se ejecuta cuando ocurre una colisión entre el jugador y otro objeto del mapa (por ej: plataformas u obstaculos).*/
+       Se ejecuta cuando ocurre una colision entre el jugador y otro objeto del mapa (por ej: plataformas u obstaculos).*/
     void HandleCollision(Player player);
 }
